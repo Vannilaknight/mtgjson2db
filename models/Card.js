@@ -11,11 +11,8 @@ var cardSchema = mongoose.Schema({
     layout: String,
     manaCost: String,
     mciNumber: String,
-    multiverseid: {
-        type: Number,
-        unique: true
-    },
     name: String,
+    names: [String],
     number: String,
     power: String,
     rarity: String,
@@ -26,8 +23,29 @@ var cardSchema = mongoose.Schema({
     types: [String],
     cardSet: String,
     format: [String],
+    genre: [String],
     banned: {
         format: Boolean
+    },
+    secondary: {
+        artist: String,
+        cmc: Number,
+        colorIdentity: [String],
+        colors: [String],
+        flavor: String,
+        id: String,
+        imageName: String,
+        layout: String,
+        manaCost: String,
+        mciNumber: String,
+        name: String,
+        names: [String],
+        number: String,
+        power: String,
+        rarity: String,
+        subtypes: [String],
+        text: String,
+        toughness: String
     }
 });
 
